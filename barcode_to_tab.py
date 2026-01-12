@@ -146,12 +146,12 @@ class BarcodeToTab:
             
             # Power chord: root on E string, fifth on A string
             notes.append(GuitarNote(0, root_fret, 2))  # Root
-            notes.append(GuitarNote(1, root_fret, 2))  # Fifth (parallel)
-            
+            notes.append(GuitarNote(1, root_fret + 2, 2))  # Fifth (2 frets up on A string)
+
             # Add some palm muted hits
             if digit in [0, 5]:
                 notes.append(GuitarNote(0, root_fret, 1))
-                notes.append(GuitarNote(1, root_fret, 1))
+                notes.append(GuitarNote(1, root_fret + 2, 1))
         
         return notes
     
